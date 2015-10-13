@@ -1,0 +1,159 @@
+html, body {
+  font-family: sans-serif, tahoma;
+  font-size: 12px;
+  color: #7794c6; }
+
+div::after {
+  content: '';
+  display: block;
+  height: 3px;
+  clear: both; }
+
+.btn, .enabled-btn, .invite-btn, .modal-window .btn-box .add-people-btn, .modal-window .left-side .tab-btn, .modal-window .right-side .tab-btn {
+  padding: 7px;
+  color: gray;
+  text-decoration: none;
+  font-weight: 700; }
+
+.enabled-btn, .invite-btn, .modal-window .btn-box .add-people-btn {
+  background: #9bb0d5;
+  padding: 7px;
+  color: #fff;
+  border-radius: 3px;
+  border-bottom: 3px #6585be solid; }
+  .enabled-btn:hover, .invite-btn:hover, .modal-window .btn-box .add-people-btn:hover {
+    background: #bfcce4;
+    border-bottom: 3px #9bb0d5 solid; }
+
+.invite-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -20px; }
+
+.modal-dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  transition: opacity 400ms ease-in;
+  display: none;
+  pointer-events: none; }
+
+.modal-dialog:target {
+  display: block;
+  pointer-events: auto; }
+
+.modal-window {
+  background: #fff;
+  border-radius: 3px;
+  width: 712px;
+  margin: auto;
+  position: relative; }
+  .modal-window h2 {
+    background: #e3e9f3;
+    border-bottom: 7px #bfcce4 solid;
+    text-align: center;
+    line-height: 60px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin: 0;
+    margin-bottom: 25px; }
+  .modal-window .left-side, .modal-window .right-side, .modal-window .right-side {
+    float: left; }
+  .modal-window .left-side, .modal-window .right-side {
+    border: 1px #5377b7 solid;
+    margin-left: 34px;
+    width: 45%;
+    overflow: hidden;
+    height: 500px; }
+    .modal-window .left-side .search-person, .modal-window .right-side .search-person {
+      width: 100%;
+      height: 40px;
+      border: none;
+      border-bottom: 1px #5377b7 solid; }
+    .modal-window .left-side .person-box, .modal-window .right-side .person-box {
+      padding: 12px;
+      overflow-y: scroll;
+      height: 435px; }
+      .modal-window .left-side .person-box .person, .modal-window .right-side .person-box .person {
+        position: relative;
+        margin: 10px; }
+        .modal-window .left-side .person-box .person .img-holder, .modal-window .right-side .person-box .person .img-holder {
+          padding: 2px;
+          width: 50px;
+          height: 50px;
+          overflow: hidden;
+          float: left;
+          margin-right: 10px; }
+          .modal-window .left-side .person-box .person .img-holder img, .modal-window .right-side .person-box .person .img-holder img {
+            width: 50px;
+            border-radius: 3px; }
+        .modal-window .left-side .person-box .person .person-about h3, .modal-window .right-side .person-box .person .person-about h3 {
+          margin: 0;
+          margin-bottom: 12px; }
+        .modal-window .left-side .person-box .person .person-about p, .modal-window .right-side .person-box .person .person-about p {
+          color: black;
+          margin: 0;
+          cursor: pointer;
+          position: relative; }
+        .modal-window .left-side .person-box .person .person-about:hover .streams, .modal-window .right-side .person-box .person .person-about:hover .streams, .modal-window .left-side .person-box .person .person-about .streams::after, .modal-window .right-side .person-box .person .person-about .streams::after {
+          display: block; }
+        .modal-window .left-side .person-box .person .person-about .streams, .modal-window .right-side .person-box .person .person-about .streams {
+          position: absolute;
+          top: -120px;
+          left: 70px;
+          list-style: none;
+          line-height: 24px;
+          color: #fff;
+          background: #404040;
+          border-radius: 3px;
+          padding: 0 25px;
+          display: none; }
+          .modal-window .left-side .person-box .person .person-about .streams::after, .modal-window .right-side .person-box .person .person-about .streams::after {
+            content: '';
+            position: absolute;
+            left: 35px;
+            bottom: -20px;
+            border: 10px solid transparent;
+            border-top: 10px solid #404040; }
+        .modal-window .left-side .person-box .person:hover, .modal-window .right-side .person-box .person:hover {
+          background: #e3e9f3; }
+        .modal-window .left-side .person-box .person .flaticon-arrow-right, .modal-window .right-side .person-box .person .flaticon-arrow-right, .modal-window .left-side .person-box .person .flaticon-cross108, .modal-window .right-side .person-box .person .flaticon-cross108 {
+          position: absolute;
+          top: 20px;
+          right: 0;
+          padding: 2px;
+          cursor: pointer; }
+    .modal-window .left-side .tab-btn, .modal-window .right-side .tab-btn {
+      margin: 0 10px;
+      border-radius: 3px;
+      position: absolute;
+      bottom: 10px;
+      cursor: pointer; }
+      .modal-window .left-side .tab-btn:hover, .modal-window .right-side .tab-btn:hover, .modal-window .left-side .tab-btn:focus, .modal-window .right-side .tab-btn:focus, .modal-window .left-side .tab-btn.active, .modal-window .right-side .tab-btn.active {
+        background: #e3e9f3;
+        border-bottom: 3px #bfcce4 solid; }
+    .modal-window .left-side #tab1, .modal-window .right-side #tab1 {
+      left: 30px; }
+    .modal-window .left-side #tab2, .modal-window .right-side #tab2 {
+      left: 120px; }
+    .modal-window .left-side input[type="radio"], .modal-window .right-side input[type="radio"], .modal-window .left-side #person-box1, .modal-window .right-side #person-box1, .modal-window .left-side #person-box2, .modal-window .right-side #person-box2 {
+      display: none; }
+    .modal-window .left-side #tab-btn1:checked ~ #person-box1, .modal-window .right-side #tab-btn1:checked ~ #person-box1, .modal-window .left-side #tab-btn2:checked ~ #person-box2, .modal-window .right-side #tab-btn2:checked ~ #person-box2 {
+      display: block; }
+  .modal-window .right-side {
+    border-left: none;
+    margin-left: 0; }
+    .modal-window .right-side .person-box {
+      height: 475px; }
+  .modal-window .btn-box {
+    width: 100%;
+    padding: 15px 30px;
+    clear: both; }
+    .modal-window .btn-box .add-people-btn {
+      margin-left: 75%; }
